@@ -4,24 +4,39 @@ import java.util.LinkedList;
 
 public class Comparators {
 	public static void main (String []args) {
-	long start= System.currentTimeMillis();
-	ArrayList <Integer>a=new ArrayList<Integer>(10000);
+
+        String []y=new String[5];
+        y[0]="A";
+        y[1]="G";
+        y[2]="U";
+       
+        long start= System.currentTimeMillis();
+
+	ArrayList <String>a=new ArrayList<String>();
 	
+
 	
 	for (int i=0; i<10000 ;i++) {
-		a.add(5);
+            for(int j=0; j<3;j++){
+		
+                a.add(y[j]);
+            }
 	}
 
 
 	String [] b = new String[10000];
 	for (int i=0; i<10000 ;i++) {
-		b[i]="A";
+            for (int j=0;j<3;j++){
+		b[i]=y[j];
+            }
 	}
 	
 	LinkedList c = new LinkedList();
 	
 	for (int i=0; i<10000 ;i++) {
-		c.add("d");
+            for (int j=0;j<3;j++){
+		c.add(y[j]);
+            }
 	}
 	
 	
